@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Indonesian PPh 21 Tax Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>PPh 21 Tax Calculator 🇮🇩</h1>
+
+    <div class="form-group">
+      <label>Monthly Gross Income (Rp):</label>
+      <input type="number" id="monthlyIncome" placeholder="e.g. 10000000" />
+    </div>
+
+    <div class="form-group">
+      <label>
+        <input type="checkbox" id="married" />
+        Married
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label>Number of Dependents (max 3):</label>
+      <input type="number" id="dependents" min="0" max="3" value="0" />
+    </div>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div class="results">
+      <h2>Results</h2>
+      <p><strong>Annual Income:</strong> <span id="annualIncome">-</span></p>
+      <p><strong>PTKP:</strong> <span id="PTKP">-</span></p>
+      <p><strong>PKP:</strong> <span id="PKP">-</span></p>
+      <p><strong>Annual Tax:</strong> <span id="annualTax">-</span></p>
+      <p><strong>Monthly Tax:</strong> <span id="monthlyTax">-</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
